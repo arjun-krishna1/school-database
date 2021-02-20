@@ -22,3 +22,12 @@ class Student(models.Model):
     )
     is_local = models.BooleanField()
 
+class StudentCourseGrade(models.Model):
+    student = models.ForeignKey(Student)
+    course = models.ForeignKey(course)
+    grade = models.DecimalField(max_digits=3, decimal_places=2)
+
+class Course(models.Model):
+    teachers = models.ManyToManyField(Teacher)
+    students = models.ManyToManyField(Student, through=StudentCourseGrade)
+
