@@ -1,11 +1,11 @@
 # Database Models
-- People
+- Person
   - Parameters:
     - address
     - phone_number
     - name
     - age
-- Students -> Inherits from People
+- Student -> Inherits from People
   - Parameters:
     - is_international
       - If not international then local
@@ -21,14 +21,14 @@
       - takes the course id to be registered in
       - Adds student to course if they are enrolled in less than 6 courses
   
-- Professors -> Inherits from People
+- Professor -> Inherits from People
   - Parameters:
     - salary
   - Methods
     - get_total_compensation():
       - salary
       - Bonus of 20,000 if they teach more than 4 courses
-- Courses
+- Course
   - Keeps track of what courses are offered at this school
   - Parameters:
     - teachers
