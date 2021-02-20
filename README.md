@@ -18,4 +18,4 @@
   - These grades are numberic in the range of 0-100
   - Any students that have an average grade across all enrolled courses lower than 60% is said to be on academic probation
 - This system will be reset and updated at the end of each semester
-- inspired by `Software Design Tutorial` series by `Tech with Tim` on YouTube
+- Inspired by `Software Design Tutorial` series by `Tech with Tim` on YouTube
