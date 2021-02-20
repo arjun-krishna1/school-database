@@ -5,8 +5,10 @@
     - phone_number
     - name
     - age
-- Student -> Inherits from People
+- Student
   - Parameters:
+    - person
+      - Person object
     - is_international
       - If not international then local
   - Methods:
@@ -21,8 +23,10 @@
       - takes the course id to be registered in
       - Adds student to course if they are enrolled in less than 6 courses
   
-- Professor -> Inherits from People
+- Professor
   - Parameters:
+    - person
+      - Person object
     - salary
   - Methods
     - get_total_compensation():
