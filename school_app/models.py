@@ -13,3 +13,12 @@ class Professor(models.Model):
         primary_key=True,
     )
     salary = models.DecimalField(max_digits=8, decimal_places=2)
+
+class Student(models.Model):
+    person = models.OneToOneField(
+        Person,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    is_local = models.BooleanField()
+
