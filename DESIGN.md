@@ -9,8 +9,8 @@
   - Parameters:
     - person
       - Person object
-    - is_international
-      - If not international then local
+    - is_local
+      - If not local then international
   - Methods:
     - get_full_time_status():
       - If the student is enrolled in more than two courses they are full time
@@ -29,7 +29,7 @@
       - Person object
     - salary
   - Methods
-    - get_total_compensation():
+    - get_total_pay():
       - salary
       - Bonus of 20,000 if they teach more than 4 courses
 - Course
