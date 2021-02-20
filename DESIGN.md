@@ -1,0 +1,43 @@
+# Database Models
+- People
+  - Parameters:
+    - address
+    - phone_number
+    - name
+    - age
+- Students -> Inherits from People
+  - Parameters:
+    - is_international
+      - If not international then local
+  - Methods:
+    - get_full_time_status():
+      - If the student is enrolled in more than two courses they are full time
+      - Else they are part time
+    - get_academic_probation_status():
+      - If the students' average grade across all courses is lower than 60% they are on academic probation
+    - get_grades():
+      - return the students' grades in all of the courses
+    - register_course(course):
+      - takes the course id to be registered in
+      - Adds student to course if they are enrolled in less than 6 courses
+  
+- Professors -> Inherits from People
+  - Parameters:
+    - salary
+  - Methods
+    - get_total_compensation():
+      - salary
+      - Bonus of 20,000 if they teach more than 4 courses
+- Courses
+  - Keeps track of what courses are offered at this school
+  - Parameters:
+    - teachers
+      - at least one but can be many
+    - students
+      - each students grade in each course must also be stored
+        - numeric value in the range of 0-100
+    - min_students, max_students
+      - If the minimum number of students isn't met, the course will be cancelled
+- Global Methods
+  - reset_database():
+    - remove all students, professors and courses
