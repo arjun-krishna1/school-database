@@ -30,4 +30,6 @@ class StudentCourseGrade(models.Model):
 class Course(models.Model):
     teachers = models.ManyToManyField(Teacher)
     students = models.ManyToManyField(Student, through=StudentCourseGrade)
+    min_students = models.IntegerField()
+    max_students = models.IntegerField()
 
